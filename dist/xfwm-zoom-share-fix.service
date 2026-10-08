@@ -1,0 +1,15 @@
+[Unit]
+Description=Keep the Zoom share frame inside the xfwm4 compositor
+Documentation=https://specifications.freedesktop.org/wm-spec/latest/
+# XFCE does not start graphical-session.target, so the XFCE autostart entry starts this unit.
+# The unit has no [Install] section, so systemd never starts it before the X server runs.
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=exec
+ExecStart=%h/.cargo/bin/xfwm-zoom-share-fix
+# The watcher exits with success when the X session ends, so systemd restarts it only after
+# a failure.
+Restart=on-failure
+RestartSec=2

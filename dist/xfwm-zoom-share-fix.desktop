@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=xfwm Zoom share fix
+Comment=Starts the watcher that keeps the Zoom share frame inside the xfwm4 compositor
+Exec=systemctl --user start xfwm-zoom-share-fix.service
+OnlyShowIn=XFCE;
+Terminal=false

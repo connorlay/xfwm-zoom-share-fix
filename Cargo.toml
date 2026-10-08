@@ -1,0 +1,9 @@
+[package]
+name = "xfwm-zoom-share-fix"
+version = "0.1.0"
+edition = "2024"
+description = "Keeps the Zoom share frame inside the xfwm4 compositor, so that a full-screen share does not freeze the screen"
+publish = false
+
+[dependencies]
+x11rb = "0.14.0"
