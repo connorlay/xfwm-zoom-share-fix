@@ -118,3 +118,7 @@ sudo apt install xvfb
 
 Xvfb runs no compositor. The tests prove that the watcher finds the frame, sets the hint, and
 maps the frame again. Only a real Zoom share proves that xfwm4 keeps drawing the screen.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
